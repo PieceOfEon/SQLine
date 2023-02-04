@@ -29,7 +29,7 @@ namespace SQLine
             
 
             InitializeComponent();
-
+            //aaaa
             //using (var connection = new SqliteConnection("Data Source = userdata.db"))
             //{
             //    connection.Open();
