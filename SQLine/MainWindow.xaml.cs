@@ -53,26 +53,30 @@ namespace SQLine
 
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
-            using (var connection = new SqliteConnection("Data Source = userdata.db"))
+            if(NameProduct.Text!="" && CountProduct.Text!="" && PriceProduct.Text!="" )
             {
-                connection.Open();
+                using (var connection = new SqliteConnection("Data Source = userdata.db"))
+                {
+                    connection.Open();
 
-                SqliteCommand command = new SqliteCommand(connectionString);
-                command.Connection = connection;
-                //"+NameProduct+" ,"+PriceProduct+", "+CountProduct+"
-                //Доабвление значений
-                command.CommandText = "INSERT INTO Product(Name,Price, Count) VALUES('" + NameProduct.Text + "' ," + PriceProduct.Text + ", " + CountProduct.Text + ")";
-                //int number = command.ExecuteNonQuery();
-                a+= Convert.ToDouble(PriceProduct.Text) * Convert.ToDouble(CountProduct.Text);
-                TotalPrice.Text = a.ToString();
-                //Console.WriteLine("Taблиа создана");
-                int number = command.ExecuteNonQuery();
-                MessageBox.Show($"В таблицу Userrs добавлено объектов:{number}");
-                //Console.WriteLine($"В таблицу Userrs добавлено объектов:{number}");
-                //Console.WriteLine($"Обновленно объектов: {number}");
+                    SqliteCommand command = new SqliteCommand(connectionString);
+                    command.Connection = connection;
+                    //"+NameProduct+" ,"+PriceProduct+", "+CountProduct+"
+                    //Доабвление значений
+                    command.CommandText = "INSERT INTO Product(Name,Price, Count) VALUES('" + NameProduct.Text + "' ," + PriceProduct.Text + ", " + CountProduct.Text + ")";
+                    //int number = command.ExecuteNonQuery();
+                    a += Convert.ToDouble(PriceProduct.Text) * Convert.ToDouble(CountProduct.Text);
+                    TotalPrice.Text = a.ToString();
+                    //Console.WriteLine("Taблиа создана");
+                    int number = command.ExecuteNonQuery();
+                    MessageBox.Show($"В таблицу Product добавлено объектов:{number}");
+                    //Console.WriteLine($"В таблицу Userrs добавлено объектов:{number}");
+                    //Console.WriteLine($"Обновленно объектов: {number}");
+                }
+                //Console.Read();
             }
-            //Console.Read();
-            
+
+
         }
     }
 }
