@@ -1,0 +1,23 @@
+﻿<Window x:Class="SQLine.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SQLine"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="NameProduct" HorizontalAlignment="Left" Margin="154,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="PriceProduct" HorizontalAlignment="Left" Margin="327,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="CountProduct" HorizontalAlignment="Left" Margin="503,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TotalPrice" HorizontalAlignment="Left" Margin="327,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Название продукта" HorizontalAlignment="Left" Margin="154,110,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Цена" HorizontalAlignment="Left" Margin="327,113,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Количество" HorizontalAlignment="Left" Margin="503,110,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Общая цена" HorizontalAlignment="Left" Margin="327,209,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="Enter" Content="Enter" HorizontalAlignment="Left" Margin="327,184,0,0" VerticalAlignment="Top" Width="120" Click="Enter_Click"/>
+        
+
+
+    </Grid>
+</Window>
