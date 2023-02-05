@@ -16,7 +16,9 @@
         <Label Content="Количество" HorizontalAlignment="Left" Margin="503,110,0,0" VerticalAlignment="Top" Width="120"/>
         <Label Content="Общая цена" HorizontalAlignment="Left" Margin="327,209,0,0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="Enter" Content="Enter" HorizontalAlignment="Left" Margin="327,184,0,0" VerticalAlignment="Top" Width="120" Click="Enter_Click"/>
-        
+        <TextBox x:Name="BazaPrint" HorizontalAlignment="Left" Margin="36,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" Height="183" IsReadOnly="True" VerticalScrollBarVisibility="Visible"/>
+        <Label Content="Baza" HorizontalAlignment="Left" Margin="36,176,0,0" VerticalAlignment="Top" Width="69"/>
+
 
 
     </Grid>

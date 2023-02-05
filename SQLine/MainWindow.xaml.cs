@@ -85,6 +85,21 @@ namespace SQLine
                         {
                             TotalPrice.Text = sqlite_datareader.GetString(0);
                         }
+                        SqliteDataReader sqlite_datareader2;
+                        SqliteCommand sqlite_cmd2;
+                        sqlite_cmd2 = connection.CreateCommand();
+                        sqlite_cmd2.CommandText = "SELECT *  FROM Product";
+
+                        sqlite_datareader2 = sqlite_cmd2.ExecuteReader();
+                        while (sqlite_datareader2.Read())
+                        {
+                            for (int i = 0; i < sqlite_datareader2.FieldCount; i++)
+                            {
+                                //MessageBox.Show(sqlite_datareader2.GetValue(i).ToString());
+                                BazaPrint.Text += sqlite_datareader2.GetValue(i) + "\t";
+                            }
+                            BazaPrint.Text += "\n";
+                        }
                         //int number2 = command.ExecuteReader();
                         //MessageBox.Show(sqlite_datareader.ToString());
                     }
